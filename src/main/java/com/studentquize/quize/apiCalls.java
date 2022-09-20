@@ -2,14 +2,12 @@ package com.studentquize.quize;
 
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 @RestController
@@ -21,37 +19,26 @@ public class apiCalls {
     //    TODO THE API
     @GetMapping(value = "/question")
     public JSONObject question() throws SQLException {
-        JSONObject jsonObject = new JSONObject();
-        someComponent.readQuestionDataBase();
-
-//        //Inserting key-value pairs into the json object
-//        jsonObject.put("code", 0);
-//        jsonObject.put("msg", "");
-//        jsonObject.put("status", 0);
+        JSONObject jsonObject = someComponent.readQuestionDataBase();
         return jsonObject;
-
     }
-
+//TODO nemidunm che kar konm felan
     @GetMapping(value = "/checkanswer")
-    public JSONObject checkanswer() {
-        JSONObject jsonObject = new JSONObject();
-        //Inserting key-value pairs into the json object
-        jsonObject.put("code", 0);
-        jsonObject.put("msg", "");
-        jsonObject.put("status", 0);
+    public JSONObject checkanswer(@RequestBody String answer) throws SQLException {
+        JSONObject jsonObject = someComponent.readQuestionAnswersDataBase();
+        String[] words=answer.split(",");
+//        for
+
+
         return jsonObject;
 
     }
 
     @GetMapping(value = "/signUp")
-    public JSONObject signUp() {
-        JSONObject jsonObject = new JSONObject();
-        //Inserting key-value pairs into the json object
-        jsonObject.put("code", 0);
-        jsonObject.put("msg", "");
-        jsonObject.put("status", 0);
-        return jsonObject;
-
+    public void signUp(@RequestBody String studentInfo) throws SQLException {
+        String[] information= studentInfo.split(",");
+//        student name and student number
+        someComponent.addStudentDataBase(information[0],information[1]);
     }
 //TODO calling API
 
