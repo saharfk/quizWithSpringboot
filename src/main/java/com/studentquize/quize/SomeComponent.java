@@ -97,9 +97,9 @@ public class SomeComponent {
 
     }
 
-    public void addStudentDataBase(String studentId, String studentName, String studentNumber) throws SQLException {
+    public void addStudentDataBase(int studentId, String studentName, String studentNumber) throws SQLException {
         String sql = "INSERT INTO STUDENT(studentId,studentName,studentNumber)\n" +
-                "VALUES  (" + studentId + studentName + "," + studentNumber + ")";
+                "VALUES  (" + studentId + ", '" + studentName + "', '" + studentNumber + "')";
         Connection con = dataSource.getConnection();
         PreparedStatement pst = con.prepareStatement(sql);
         pst.executeQuery();

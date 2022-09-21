@@ -21,7 +21,7 @@ public class studentApi {
     //TODO nemidunm che kar konm felan
     @GetMapping(value = "/signUp")
     public void signUp(@RequestBody List<String> studentInfo) throws SQLException {
-        someComponent.addStudentDataBase(studentInfo.get(0), studentInfo.get(1), studentInfo.get(2));
+        someComponent.addStudentDataBase(Integer.parseInt(studentInfo.get(0)), studentInfo.get(1), studentInfo.get(2));
     }
 
     @GetMapping(value = "/delete")

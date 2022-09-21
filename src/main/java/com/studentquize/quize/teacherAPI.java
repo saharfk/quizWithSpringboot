@@ -17,6 +17,8 @@ public class teacherAPI {
     @GetMapping(value = "/newdatabase")
     public void newdatabase() throws SQLException {
         someComponent.createQuestionDataBase();
+        someComponent.createStudentDataBase();
+        someComponent.createReportDataBase();
     }
 
     //TODO nemidunm che kar konm felan
