@@ -32,8 +32,18 @@ public class teacherAPI {
         someComponent.addQuestionTeacher(question);
     }
 
-    @GetMapping(value = "/deleteDB")
-    public void deleteDB() throws SQLException {
+    @GetMapping(value = "/deleteQDB")
+    public void deleteQDB() throws SQLException {
         someComponent.deleteQuestionDataBase();
+    }
+
+    @GetMapping(value = "/deleteReport")
+    public void deleteReport() throws SQLException {
+        someComponent.deleteReportDataBase();
+    }
+
+    @GetMapping(value = "/showReport")
+    public List<List<String>> showReport() throws SQLException {
+        return someComponent.readReportDataBase();
     }
 }

@@ -28,6 +28,10 @@ public class studentApi {
     public void delete() throws SQLException {
         someComponent.deleteStudentDataBase();
     }
+    @GetMapping(value = "/deleteSt")
+    public void deleteSt(@RequestBody int num) throws SQLException {
+        someComponent.deleteStudent(num);
+    }
 
     @GetMapping(value = "/studentList")
     public List<List<String>> studentList() throws SQLException {
