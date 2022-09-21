@@ -7,7 +7,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.sql.SQLException;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 @RestController
@@ -22,24 +21,22 @@ public class apiCalls {
         JSONObject jsonObject = someComponent.readQuestionDataBase();
         return jsonObject;
     }
-//TODO nemidunm che kar konm felan
+
+    //TODO nemidunm che kar konm felan
     @GetMapping(value = "/checkanswer")
-    public JSONObject checkanswer(@RequestBody String answer) throws SQLException {
+    public int checkanswer(@RequestBody String answer) throws SQLException {
         JSONObject jsonObject = someComponent.readQuestionAnswersDataBase();
-        String[] words=answer.split(",");
-//        for
-
-
-        return jsonObject;
-
+        String[] words = answer.split(",");
+        int point = 0;
+        for (int i = 0; i < words.length; i++) {
+            if (words[1] == jsonObject.get(i)) {
+                point += 5;
+            }
+        }
+        return point;
     }
 
-    @GetMapping(value = "/signUp")
-    public void signUp(@RequestBody String studentInfo) throws SQLException {
-        String[] information= studentInfo.split(",");
-//        student name and student number
-        someComponent.addStudentDataBase(information[0],information[1]);
-    }
+
 //TODO calling API
 
     @GetMapping(value = "/countries")
