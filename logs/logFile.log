@@ -1,0 +1,5 @@
+10:20:22.285 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 15120 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
+10:20:22.289 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+10:20:23.637 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+10:20:24.719 INFO  [main][QuizeApplication] Started QuizeApplication in 3.063 seconds (JVM running for 4.58)
+10:20:29.039 INFO  [http-nio-8081-exec-2][apiCalls] [] showing the list of questions

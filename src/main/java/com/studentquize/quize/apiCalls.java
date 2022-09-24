@@ -22,17 +22,19 @@ public class apiCalls {
     SomeComponent someComponent;
 
     //    TODO THE API
-    @Cacheable("questions")
+//    @Cacheable("questions")
     @GetMapping(value = "/questions")
     public JSONObject question() throws SQLException {
+        logger.info("[] showing the list of questions");
         JSONObject jsonObject = someComponent.readQuestionDataBase();
         return jsonObject;
     }
 
     //TODO nemidunm che kar konm felan
-    @CacheEvict(value = "marks", allEntries = true)
+//    @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/checkanswer")
     public String checkanswer(@RequestBody List<String> answerInfo) throws SQLException {
+        logger.info("[] checking the answers for adding marks");
         JSONObject jsonObject = someComponent.readQuestionAnswersDataBase();
         String[] words = answerInfo.get(1).split(",");
         if (words.length > jsonObject.size()) {
