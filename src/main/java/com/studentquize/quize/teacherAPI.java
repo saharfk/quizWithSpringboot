@@ -19,69 +19,83 @@ public class teacherAPI {
     @Autowired
     SomeComponent someComponent;
 
-    @GetMapping(value = "/newdatabase")
-    public void newdatabase() throws SQLException {
+    @GetMapping(value = "/newTable")
+    public String newTable() throws SQLException {
 
-        logger.info("[] creating Question, student and report databases");
+        logger.info("creating Question, student and report Tables");
 
-        someComponent.createQuestionDataBase();
-        someComponent.createStudentDataBase();
-        someComponent.createReportDataBase();
+        someComponent.createQuestionTable();
+        someComponent.createStudentTable();
+        someComponent.createReportTable();
+        return "success";
+
     }
 
-//    @CacheEvict(value = "questions", allEntries = true)
+    //    @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/addQ")
-    public void insertQ() throws SQLException {
-        logger.info("[] inserting question in database (DEMO QUESTIONS)");
-        someComponent.addQuestionDataBase();
+    public String insertQ() throws SQLException {
+        logger.info("inserting question in Table (DEMO QUESTIONS)");
+        someComponent.addQuestionTable();
+        return "success";
+
     }
 
     //    @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/insertQ")
-    public void insertQT(@RequestBody List<JSONObject> question) throws SQLException {
-        logger.info("[] inserting question in database by teacher");
+    public String insertQT(@RequestBody List<JSONObject> question) throws SQLException {
+        logger.info("inserting question in Table by teacher");
         someComponent.addQuestionTeacher(question);
+        return "success";
+
     }
 
     //    @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/deleteQDB")
-    public void deleteQDB() throws SQLException {
-        logger.info("[] deleting the questions database");
-        someComponent.deleteQuestionDataBase();
+    public String deleteQDB() throws SQLException {
+        logger.info("deleting the questions Table");
+        someComponent.deleteQuestionTable();
+        return "success";
+
     }
 
     //    @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/deleteReport")
-    public void deleteReport() throws SQLException {
-        logger.info("[] deleting the report database");
-        someComponent.deleteReportDataBase();
+    public String deleteReport() throws SQLException {
+        logger.info("deleting the report Table");
+        someComponent.deleteReportTable();
+        return "success";
+
     }
 
     //    @Cacheable("marks")
     @GetMapping(value = "/showReport")
     public List<List<String>> showReport() throws SQLException {
-        logger.info("[] showing the list of student marks");
-        return someComponent.readReportDataBase();
+        logger.info("showing the list of student marks");
+        return someComponent.readReportTable();
     }
 
     //    @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/updateQuestion")
-    public void updateQuestion(@RequestBody JSONObject upQ) throws SQLException {
-        logger.info("[] updating question {} where {}", upQ.get("update"), upQ.get("condition"));
+    public String updateQuestion(@RequestBody JSONObject upQ) throws SQLException {
+        logger.info("updating question {} where {}", upQ.get("update"), upQ.get("condition"));
         someComponent.updateQ(upQ);
+        return "success";
     }
 
     //    @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/updateMark")
-    public void updateMark(@RequestBody JSONObject upMark) throws SQLException {
-        logger.info("[] updating question {} where {}", upMark.get("update"), upMark.get("condition"));
+    public String updateMark(@RequestBody JSONObject upMark) throws SQLException {
+        logger.info("updating question {} where {}", upMark.get("update"), upMark.get("condition"));
         someComponent.updateMark(upMark);
+        return "success";
     }
 
     //    @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/deleteOneMark")
-    public void deleteOneMark(@RequestBody JSONObject delMark) throws SQLException {
-        logger.info("[] deleting mark where {}", delMark.get("condition"));
+    public String deleteOneMark(@RequestBody String delMark) throws SQLException {
+        logger.info("[] deleting mark where {}", delMark);
         someComponent.delMark(delMark);
+        return "success";
+
     }
 }

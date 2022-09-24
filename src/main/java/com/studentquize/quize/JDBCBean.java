@@ -18,6 +18,7 @@ public class JDBCBean {
 
     @Bean
     public HikariDataSource mysqlDataSource() {
+        logger.info("connecting to database");
         HikariConfig dataSource = new HikariConfig();
         dataSource.setJdbcUrl("jdbc:oracle:thin:@" + appConfig.getJdbcURL() + ":" + appConfig.getPort() + "/" + appConfig.getServicename());
         dataSource.setUsername(appConfig.getUsername());

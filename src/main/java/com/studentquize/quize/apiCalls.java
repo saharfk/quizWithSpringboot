@@ -21,23 +21,21 @@ public class apiCalls {
     @Autowired
     SomeComponent someComponent;
 
-    //    TODO THE API
 //    @Cacheable("questions")
     @GetMapping(value = "/questions")
     public JSONObject question() throws SQLException {
-        logger.info("[] showing the list of questions");
-        JSONObject jsonObject = someComponent.readQuestionDataBase();
+        logger.info("showing the list of questions");
+        JSONObject jsonObject = someComponent.readQuestionTable();
         return jsonObject;
     }
 
-    //TODO nemidunm che kar konm felan
 //    @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/checkanswer")
     public String checkanswer(@RequestBody List<String> answerInfo) throws SQLException {
-        logger.info("[] checking the answers for adding marks");
-        JSONObject jsonObject = someComponent.readQuestionAnswersDataBase();
+        logger.info("checking the answers for adding marks");
+        JSONObject jsonObject = someComponent.readQuestionAnswersTable();
         String[] words = answerInfo.get(1).split(",");
-        if (words.length > jsonObject.size()) {
+        if (words.length <= jsonObject.size()) {
             int point = 0;
             for (int i = 1; i <= words.length; i++) {
                 System.out.println(jsonObject.get(String.valueOf(i)) + words[i - 1]);
@@ -45,7 +43,7 @@ public class apiCalls {
                     point += 5;
                 }
             }
-            someComponent.addReportDataBase(Integer.parseInt(answerInfo.get(0)), point);
+            someComponent.addReportTable(Integer.parseInt(answerInfo.get(0)), point);
             return "your grade is " + point;
         }
         return "you answered the wrong questions :)";

@@ -22,45 +22,52 @@ public class studentApi {
     //    TODO THE API
 //    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/newStudentDB")
-    public void newStudentDB() throws SQLException {
-        logger.info("[] creating new student database");
-        someComponent.createStudentDataBase();
+    public String newStudentDB() throws SQLException {
+        logger.info("creating new student Table");
+        someComponent.createStudentTable();
+        return "success";
+
     }
 
     //TODO nemidunm che kar konm felan
 //    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/signUp")
-    public void signUp(@RequestBody List<String> studentInfo) throws SQLException {
-        logger.info("[] adding student to database");
-        someComponent.addStudentDataBase(Integer.parseInt(studentInfo.get(0)), studentInfo.get(1), studentInfo.get(2));
+    public String signUp(@RequestBody List<String> studentInfo) throws SQLException {
+        logger.info("adding student to Table");
+        someComponent.addStudentTable(Integer.parseInt(studentInfo.get(0)), studentInfo.get(1), studentInfo.get(2));
+        return "success";
     }
 
     //    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/delete")
-    public void delete() throws SQLException {
-        logger.info("[] deleting student database");
-        someComponent.deleteStudentDataBase();
+    public String delete() throws SQLException {
+        logger.info("deleting student Table");
+        someComponent.deleteStudentTable();
+        return "success";
     }
 
     //    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/deleteSt")
-    public void deleteSt(@RequestBody int num) throws SQLException {
-        logger.info("[] deleting studentId {}", num);
+    public String deleteSt(@RequestBody int num) throws SQLException {
+        logger.info("deleting studentId {}", num);
         someComponent.deleteStudent(num);
+        return "success";
+
     }
 
     //    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/updateSt")
-    public void updateSt(@RequestBody JSONObject upSt) throws SQLException {
-        logger.info("[] updating student where {}", upSt.get("update"));
+    public String updateSt(@RequestBody JSONObject upSt) throws SQLException {
+        logger.info("updating student where {}", upSt.get("update"));
         someComponent.updateStudent(upSt);
+        return "success";
     }
 
     //    @Cacheable("students")
     @GetMapping(value = "/studentList")
     public List<List<String>> studentList() throws SQLException {
-        logger.info("[] showing the list of students");
-        return someComponent.readStudentDataBase();
+        logger.info("showing the list of students");
+        return someComponent.readStudentTable();
 
     }
 }
