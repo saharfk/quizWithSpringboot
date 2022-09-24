@@ -210,4 +210,34 @@ public class SomeComponent {
         }
         return data;
     }
+
+    //    ****************************************************
+    public void updateQ(JSONObject upQ) throws SQLException {
+        String sql = "UPDATE  QUESTIONTBL SET " + upQ.get("update") + " WHERE " + upQ.get("condition");
+        Connection con = dataSource.getConnection();
+        PreparedStatement pst = con.prepareStatement(sql);
+        pst.executeQuery();
+    }
+
+    public void updateStudent(JSONObject upSt) throws SQLException {
+        String sql = "UPDATE  STUDENT SET " + upSt.get("update") + " WHERE " + upSt.get("condition");
+        Connection con = dataSource.getConnection();
+        PreparedStatement pst = con.prepareStatement(sql);
+        pst.executeQuery();
+    }
+
+    public void updateMark(JSONObject upMark) throws SQLException {
+        String sql = "UPDATE  STUDENTREPORT SET " + upMark.get("update") + " WHERE " + upMark.get("condition");
+        Connection con = dataSource.getConnection();
+        PreparedStatement pst = con.prepareStatement(sql);
+        pst.executeQuery();
+    }
+
+    public void delMark(JSONObject upMark) throws SQLException {
+        String sql = "DELETE FROM STUDENTREPORT WHERE " + upMark.get("condition");
+        Connection con = dataSource.getConnection();
+        PreparedStatement pst = con.prepareStatement(sql);
+        pst.executeQuery();
+    }
+
 }

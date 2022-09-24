@@ -1,7 +1,11 @@
 package com.studentquize.quize;
 
 import org.json.simple.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
@@ -12,10 +16,13 @@ import java.util.Objects;
 @RestController
 @RequestMapping("/api")
 public class apiCalls {
+    static final Logger logger = LoggerFactory.getLogger(apiCalls.class);
+
     @Autowired
     SomeComponent someComponent;
 
     //    TODO THE API
+    @Cacheable("questions")
     @GetMapping(value = "/questions")
     public JSONObject question() throws SQLException {
         JSONObject jsonObject = someComponent.readQuestionDataBase();
@@ -23,6 +30,7 @@ public class apiCalls {
     }
 
     //TODO nemidunm che kar konm felan
+    @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/checkanswer")
     public String checkanswer(@RequestBody List<String> answerInfo) throws SQLException {
         JSONObject jsonObject = someComponent.readQuestionAnswersDataBase();

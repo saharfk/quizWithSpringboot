@@ -2,6 +2,8 @@ package com.studentquize.quize;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,6 +11,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class JDBCBean {
+    static final Logger logger = LoggerFactory.getLogger(JDBCBean.class);
+
     @Autowired
     public AppConfig appConfig;
 
