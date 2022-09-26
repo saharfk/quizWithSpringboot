@@ -197,7 +197,6 @@ public class SomeComponent {
         Connection con = dataSource.getConnection();
         PreparedStatement pst = con.prepareStatement(sql);
         ResultSet rs = pst.executeQuery();
-        System.out.println(rs);
         while (rs.next()) {
             List<String> innerData = new ArrayList<>();
             int STUDENTID = rs.getInt("STUDENTID");
@@ -206,6 +205,7 @@ public class SomeComponent {
             innerData.add(String.valueOf(SCORE));
             data.add(innerData);
         }
+        System.out.println("helloooooo");
         return data;
     }
 

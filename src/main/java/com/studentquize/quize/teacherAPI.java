@@ -31,7 +31,7 @@ public class teacherAPI {
 
     }
 
-    //    @CacheEvict(value = "questions", allEntries = true)
+    @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/addQ")
     public String insertQ() throws SQLException {
         logger.info("inserting question in Table (DEMO QUESTIONS)");
@@ -40,7 +40,7 @@ public class teacherAPI {
 
     }
 
-    //    @CacheEvict(value = "questions", allEntries = true)
+    @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/insertQ")
     public String insertQT(@RequestBody List<JSONObject> question) throws SQLException {
         logger.info("inserting question in Table by teacher");
@@ -49,7 +49,7 @@ public class teacherAPI {
 
     }
 
-    //    @CacheEvict(value = "questions", allEntries = true)
+    @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/deleteQDB")
     public String deleteQDB() throws SQLException {
         logger.info("deleting the questions Table");
@@ -58,7 +58,7 @@ public class teacherAPI {
 
     }
 
-    //    @CacheEvict(value = "marks", allEntries = true)
+    @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/deleteReport")
     public String deleteReport() throws SQLException {
         logger.info("deleting the report Table");
@@ -67,14 +67,14 @@ public class teacherAPI {
 
     }
 
-    //    @Cacheable("marks")
+    @Cacheable("marks")
     @GetMapping(value = "/showReport")
     public List<List<String>> showReport() throws SQLException {
         logger.info("showing the list of student marks");
         return someComponent.readReportTable();
     }
 
-    //    @CacheEvict(value = "questions", allEntries = true)
+    @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/updateQuestion")
     public String updateQuestion(@RequestBody JSONObject upQ) throws SQLException {
         logger.info("updating question {} where {}", upQ.get("update"), upQ.get("condition"));
@@ -82,7 +82,7 @@ public class teacherAPI {
         return "success";
     }
 
-    //    @CacheEvict(value = "marks", allEntries = true)
+    @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/updateMark")
     public String updateMark(@RequestBody JSONObject upMark) throws SQLException {
         logger.info("updating question {} where {}", upMark.get("update"), upMark.get("condition"));
@@ -90,7 +90,7 @@ public class teacherAPI {
         return "success";
     }
 
-    //    @CacheEvict(value = "marks", allEntries = true)
+    @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/deleteOneMark")
     public String deleteOneMark(@RequestBody String delMark) throws SQLException {
         logger.info("[] deleting mark where {}", delMark);

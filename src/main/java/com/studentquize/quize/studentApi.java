@@ -20,7 +20,7 @@ public class studentApi {
     SomeComponent someComponent;
 
     //    TODO THE API
-//    @CacheEvict(value = "students", allEntries = true)
+    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/newStudentDB")
     public String newStudentDB() throws SQLException {
         logger.info("creating new student Table");
@@ -30,7 +30,7 @@ public class studentApi {
     }
 
     //TODO nemidunm che kar konm felan
-//    @CacheEvict(value = "students", allEntries = true)
+    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/signUp")
     public String signUp(@RequestBody List<String> studentInfo) throws SQLException {
         logger.info("adding student to Table");
@@ -38,7 +38,7 @@ public class studentApi {
         return "success";
     }
 
-    //    @CacheEvict(value = "students", allEntries = true)
+    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/delete")
     public String delete() throws SQLException {
         logger.info("deleting student Table");
@@ -46,7 +46,7 @@ public class studentApi {
         return "success";
     }
 
-    //    @CacheEvict(value = "students", allEntries = true)
+    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/deleteSt")
     public String deleteSt(@RequestBody int num) throws SQLException {
         logger.info("deleting studentId {}", num);
@@ -55,7 +55,7 @@ public class studentApi {
 
     }
 
-    //    @CacheEvict(value = "students", allEntries = true)
+    @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/updateSt")
     public String updateSt(@RequestBody JSONObject upSt) throws SQLException {
         logger.info("updating student where {}", upSt.get("update"));
@@ -63,7 +63,7 @@ public class studentApi {
         return "success";
     }
 
-    //    @Cacheable("students")
+    @Cacheable("students")
     @GetMapping(value = "/studentList")
     public List<List<String>> studentList() throws SQLException {
         logger.info("showing the list of students");
