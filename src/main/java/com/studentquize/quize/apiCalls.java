@@ -35,7 +35,7 @@ public class apiCalls {
         logger.info("checking the answers for adding marks");
         JSONObject jsonObject = someComponent.readQuestionAnswersTable();
         String[] words = answerInfo.get(1).split(",");
-        if (words.length <= jsonObject.size()) {
+        if (words.length == jsonObject.size()) {
             int point = 0;
             for (int i = 1; i <= words.length; i++) {
                 if (Objects.equals(words[i - 1], String.valueOf(jsonObject.get(String.valueOf(i))))) {
@@ -47,5 +47,4 @@ public class apiCalls {
         }
         return "you answered the wrong questions :)";
     }
-
 }

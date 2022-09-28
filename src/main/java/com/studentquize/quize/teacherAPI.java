@@ -20,7 +20,7 @@ public class teacherAPI {
     SomeComponent someComponent;
 
     @GetMapping(value = "/newTable")
-    public String newTable() throws SQLException {
+    public String newTable() {
 
         logger.info("creating Question, student and report Tables");
 
@@ -33,7 +33,7 @@ public class teacherAPI {
 
     @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/addQ")
-    public String insertQ() throws SQLException {
+    public String insertQ(){
         logger.info("inserting question in Table (DEMO QUESTIONS)");
         someComponent.addQuestionTable();
         return "success";
@@ -42,7 +42,7 @@ public class teacherAPI {
 
     @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/insertQ")
-    public String insertQT(@RequestBody List<JSONObject> question) throws SQLException {
+    public String insertQT(@RequestBody List<JSONObject> question){
         logger.info("inserting question in Table by teacher");
         someComponent.addQuestionTeacher(question);
         return "success";
@@ -51,7 +51,7 @@ public class teacherAPI {
 
     @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/deleteQDB")
-    public String deleteQDB() throws SQLException {
+    public String deleteQDB(){
         logger.info("deleting the questions Table");
         someComponent.deleteQuestionTable();
         return "success";
@@ -60,7 +60,7 @@ public class teacherAPI {
 
     @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/deleteReport")
-    public String deleteReport() throws SQLException {
+    public String deleteReport(){
         logger.info("deleting the report Table");
         someComponent.deleteReportTable();
         return "success";
