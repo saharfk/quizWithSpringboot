@@ -69,14 +69,14 @@ public class teacherAPI {
 
     @Cacheable("marks")
     @GetMapping(value = "/showReport")
-    public List<List<String>> showReport() throws SQLException {
+    public List<List<String>> showReport() {
         logger.info("showing the list of student marks");
         return someComponent.readReportTable();
     }
 
     @CacheEvict(value = "questions", allEntries = true)
     @GetMapping(value = "/updateQuestion")
-    public String updateQuestion(@RequestBody JSONObject upQ) throws SQLException {
+    public String updateQuestion(@RequestBody JSONObject upQ) {
         logger.info("updating question {} where {}", upQ.get("update"), upQ.get("condition"));
         someComponent.updateQ(upQ);
         return "success";
@@ -84,7 +84,7 @@ public class teacherAPI {
 
     @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/updateMark")
-    public String updateMark(@RequestBody JSONObject upMark) throws SQLException {
+    public String updateMark(@RequestBody JSONObject upMark) {
         logger.info("updating question {} where {}", upMark.get("update"), upMark.get("condition"));
         someComponent.updateMark(upMark);
         return "success";
@@ -92,7 +92,7 @@ public class teacherAPI {
 
     @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/deleteOneMark")
-    public String deleteOneMark(@RequestBody String delMark) throws SQLException {
+    public String deleteOneMark(@RequestBody String delMark) {
         logger.info("[] deleting mark where {}", delMark);
         someComponent.delMark(delMark);
         return "success";

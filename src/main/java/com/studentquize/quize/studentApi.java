@@ -22,7 +22,7 @@ public class studentApi {
     //    TODO THE API
     @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/newStudentDB")
-    public String newStudentDB() throws SQLException {
+    public String newStudentDB() {
         logger.info("creating new student Table");
         someComponent.createStudentTable();
         return "success";
@@ -32,7 +32,7 @@ public class studentApi {
     //TODO nemidunm che kar konm felan
     @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/signUp")
-    public String signUp(@RequestBody List<String> studentInfo) throws SQLException {
+    public String signUp(@RequestBody List<String> studentInfo) {
         logger.info("adding student to Table");
         someComponent.addStudentTable(Integer.parseInt(studentInfo.get(0)), studentInfo.get(1), studentInfo.get(2));
         return "success";
@@ -40,7 +40,7 @@ public class studentApi {
 
     @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/delete")
-    public String delete() throws SQLException {
+    public String delete() {
         logger.info("deleting student Table");
         someComponent.deleteStudentTable();
         return "success";
@@ -48,7 +48,7 @@ public class studentApi {
 
     @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/deleteSt")
-    public String deleteSt(@RequestBody int num) throws SQLException {
+    public String deleteSt(@RequestBody int num) {
         logger.info("deleting studentId {}", num);
         someComponent.deleteStudent(num);
         return "success";
@@ -57,7 +57,7 @@ public class studentApi {
 
     @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/updateSt")
-    public String updateSt(@RequestBody JSONObject upSt) throws SQLException {
+    public String updateSt(@RequestBody JSONObject upSt) {
         logger.info("updating student where {}", upSt.get("update"));
         someComponent.updateStudent(upSt);
         return "success";
@@ -65,7 +65,7 @@ public class studentApi {
 
     @Cacheable("students")
     @GetMapping(value = "/studentList")
-    public List<List<String>> studentList() throws SQLException {
+    public List<List<String>> studentList() {
         logger.info("showing the list of students");
         return someComponent.readStudentTable();
 

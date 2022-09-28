@@ -23,7 +23,7 @@ public class apiCalls {
 
     @Cacheable("questions")
     @GetMapping(value = "/questions")
-    public JSONObject question() throws SQLException {
+    public JSONObject question() {
         logger.info("showing the list of questions");
         JSONObject jsonObject = someComponent.readQuestionTable();
         return jsonObject;
@@ -31,7 +31,7 @@ public class apiCalls {
 
     @CacheEvict(value = "marks", allEntries = true)
     @GetMapping(value = "/checkanswer")
-    public String checkanswer(@RequestBody List<String> answerInfo) throws SQLException {
+    public String checkanswer(@RequestBody List<String> answerInfo) {
         logger.info("checking the answers for adding marks");
         JSONObject jsonObject = someComponent.readQuestionAnswersTable();
         String[] words = answerInfo.get(1).split(",");
