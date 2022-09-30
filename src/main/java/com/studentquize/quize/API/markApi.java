@@ -1,5 +1,6 @@
-package com.studentquize.quize;
+package com.studentquize.quize.API;
 
+import com.studentquize.quize.DB.MarkAndQuestionDB;
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,25 +8,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Objects;
 
 
 @RestController
 @RequestMapping("/api")
-public class apiCalls {
-    static final Logger logger = LoggerFactory.getLogger(apiCalls.class);
+public class markApi {
+    static final Logger logger = LoggerFactory.getLogger(markApi.class);
 
     @Autowired
-    SomeComponent someComponent;
+    MarkAndQuestionDB markAndQuestionDB;
 
     @Cacheable("questions")
     @GetMapping(value = "/questions")
     public JSONObject question() {
         logger.info("showing the list of questions");
-        JSONObject jsonObject = someComponent.readQuestionTable();
+        JSONObject jsonObject = markAndQuestionDB.readQuestionTable();
+        String log = "showing the list of questions";
+        String url = "http://localhost:9192/rabbit/report";
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.postForObject(url, log, JSONObject.class);
         return jsonObject;
     }
 
@@ -33,7 +38,7 @@ public class apiCalls {
     @GetMapping(value = "/checkanswer")
     public String checkanswer(@RequestBody List<String> answerInfo) {
         logger.info("checking the answers for adding marks");
-        JSONObject jsonObject = someComponent.readQuestionAnswersTable();
+        JSONObject jsonObject = markAndQuestionDB.readQuestionAnswersTable();
         String[] words = answerInfo.get(1).split(",");
         if (words.length == jsonObject.size()) {
             int point = 0;
@@ -42,7 +47,11 @@ public class apiCalls {
                     point += 5;
                 }
             }
-            someComponent.addReportTable(Integer.parseInt(answerInfo.get(0)), point);
+            markAndQuestionDB.addReportTable(Integer.parseInt(answerInfo.get(0)), point);
+            String log = "StdNum: " + answerInfo.get(0) + "'s grade is " + point;
+            String url = "http://localhost:9192/rabbit/report";
+            RestTemplate restTemplate = new RestTemplate();
+            restTemplate.postForObject(url, log, JSONObject.class);
             return "your grade is " + point;
         }
         return "you answered the wrong questions :)";

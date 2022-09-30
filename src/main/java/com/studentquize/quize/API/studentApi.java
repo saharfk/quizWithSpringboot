@@ -1,5 +1,6 @@
-package com.studentquize.quize;
+package com.studentquize.quize.API;
 
+import com.studentquize.quize.DB.studentDB;
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
-import java.sql.SQLException;
 import java.util.List;
 
 @RestController
@@ -17,14 +18,18 @@ public class studentApi {
     static final Logger logger = LoggerFactory.getLogger(studentApi.class);
 
     @Autowired
-    SomeComponent someComponent;
+    studentDB studentDb;
 
     //    TODO THE API
     @CacheEvict(value = "students", allEntries = true)
     @GetMapping(value = "/newStudentDB")
     public String newStudentDB() {
         logger.info("creating new student Table");
-        someComponent.createStudentTable();
+        studentDb.createStudentTable();
+        String log = "creating new student Table";
+        String url = "http://localhost:9192/rabbit/report";
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
 
     }
@@ -34,7 +39,11 @@ public class studentApi {
     @GetMapping(value = "/signUp")
     public String signUp(@RequestBody List<String> studentInfo) {
         logger.info("adding student to Table");
-        someComponent.addStudentTable(Integer.parseInt(studentInfo.get(0)), studentInfo.get(1), studentInfo.get(2));
+        studentDb.addStudentTable(Integer.parseInt(studentInfo.get(0)), studentInfo.get(1), studentInfo.get(2));
+        String log = "adding student to Table";
+        String url = "http://localhost:9192/rabbit/report";
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
     }
 
@@ -42,7 +51,11 @@ public class studentApi {
     @GetMapping(value = "/delete")
     public String delete() {
         logger.info("deleting student Table");
-        someComponent.deleteStudentTable();
+        studentDb.deleteStudentTable();
+        String log = "deleting student Table";
+        String url = "http://localhost:9192/rabbit/report";
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
     }
 
@@ -50,7 +63,11 @@ public class studentApi {
     @GetMapping(value = "/deleteSt")
     public String deleteSt(@RequestBody int num) {
         logger.info("deleting studentId {}", num);
-        someComponent.deleteStudent(num);
+        studentDb.deleteStudent(num);
+        String log = "deleting studentId " + num;
+        String url = "http://localhost:9192/rabbit/report";
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
 
     }
@@ -59,7 +76,11 @@ public class studentApi {
     @GetMapping(value = "/updateSt")
     public String updateSt(@RequestBody JSONObject upSt) {
         logger.info("updating student where {}", upSt.get("update"));
-        someComponent.updateStudent(upSt);
+        studentDb.updateStudent(upSt);
+        String log = "updating student where " + upSt.get("update");
+        String url = "http://localhost:9192/rabbit/report";
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
     }
 
@@ -67,7 +88,11 @@ public class studentApi {
     @GetMapping(value = "/studentList")
     public List<List<String>> studentList() {
         logger.info("showing the list of students");
-        return someComponent.readStudentTable();
+        String log = "showing the list of students";
+        String url = "http://localhost:9192/rabbit/report";
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.postForObject(url, log, JSONObject.class);
+        return studentDb.readStudentTable();
 
     }
 }

@@ -78,3 +78,7 @@ java.net.ConnectException: Connection refused: no further information
 10:30:13.203 INFO  [main][JDBCBean] connecting to database
 10:30:13.250 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
 10:30:14.618 INFO  [main][QuizeApplication] Started QuizeApplication in 3.332 seconds (JVM running for 4.773)
+18:49:34.864 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 1.8.0_45 on DESKTOP-TIH7J9U with PID 12156 (E:\project\quiz\quizWithSpringboot\target\classes started by Asus in E:\project\quiz\quizWithSpringboot)
+18:49:34.892 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+18:49:45.633 INFO  [main][JDBCBean] connecting to database
+18:49:45.840 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.

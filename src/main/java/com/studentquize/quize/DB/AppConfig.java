@@ -1,4 +1,4 @@
-package com.studentquize.quize;
+package com.studentquize.quize.DB;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.studentquize.quize;
+package com.studentquize.quize.DB;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
