@@ -59,4 +59,20 @@ public class logDB {
 
     }
 
+    public void deleteLogTable() {
+        try {
+            String sql = "DROP TABLE logTbl";
+            Connection con = dataSource.getConnection();
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.executeQuery();
+        } catch (SQLException e) {
+            logger.error("could not drop STUDENT table");
+            String log = "ERROR: could not drop STUDENT table";
+            String url = "http://localhost:9192/rabbit/report";
+            RestTemplate restTemplate = new RestTemplate();
+            restTemplate.postForObject(url, log, JSONObject.class);
+        }
+
+    }
+
 }
