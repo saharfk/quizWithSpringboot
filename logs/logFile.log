@@ -1,84 +1,96 @@
-08:57:12.679 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 10560 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
-08:57:12.679 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-08:57:14.304 INFO  [main][JDBCBean] connecting to database
-08:57:14.367 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-08:57:15.978 INFO  [main][QuizeApplication] Started QuizeApplication in 3.719 seconds (JVM running for 5.747)
-08:58:52.813 ERROR [http-nio-8081-exec-1][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379] with root cause
-java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+10:45:55.318 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 14216 (F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot)
+10:45:55.318 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+10:45:56.838 INFO  [main][JDBCBean] connecting to database
+10:45:56.875 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+10:45:58.310 INFO  [main][QuizeApplication] Started QuizeApplication in 3.478 seconds (JVM running for 6.137)
+10:49:22.286 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 9368 (F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot)
+10:49:22.301 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+10:49:23.837 INFO  [main][JDBCBean] connecting to database
+10:49:23.875 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+10:49:25.361 INFO  [main][QuizeApplication] Started QuizeApplication in 3.674 seconds (JVM running for 5.8)
+10:49:29.545 INFO  [http-nio-8081-exec-2][teacherApi] showing the list of student marks
+10:49:31.686 ERROR [http-nio-8081-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://172.18.63.37:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at java.base/java.net.Socket.connect(Socket.java:557)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437)
+	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:104)
+	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
+	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$75c7e4c1.showReport(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-09:07:47.393 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 15244 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
-09:07:47.393 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-09:07:48.721 INFO  [main][JDBCBean] connecting to database
-09:07:48.752 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-09:07:49.611 INFO  [main][QuizeApplication] Started QuizeApplication in 3.063 seconds (JVM running for 5.098)
-09:07:56.473 INFO  [http-nio-8081-exec-2][teacherAPI] showing the list of student marks
-09:09:13.280 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 12040 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
-09:09:13.284 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-09:09:14.722 INFO  [main][JDBCBean] connecting to database
-09:09:14.754 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-09:09:15.657 INFO  [main][QuizeApplication] Started QuizeApplication in 3.116 seconds (JVM running for 5.062)
-09:09:23.754 INFO  [http-nio-8081-exec-2][teacherAPI] showing the list of student marks
-09:09:48.290 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 13396 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
-09:09:48.306 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-09:09:49.665 INFO  [main][JDBCBean] connecting to database
-09:09:49.697 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-09:09:50.837 INFO  [main][QuizeApplication] Started QuizeApplication in 3.162 seconds (JVM running for 4.519)
-09:10:27.176 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 10968 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
-09:10:27.176 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-09:10:28.339 INFO  [main][JDBCBean] connecting to database
-09:10:28.373 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-09:10:29.467 INFO  [main][QuizeApplication] Started QuizeApplication in 2.805 seconds (JVM running for 4.887)
-09:10:47.376 INFO  [http-nio-8081-exec-2][teacherAPI] showing the list of student marks
-09:54:03.533 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 13048 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
-09:54:03.533 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-09:54:04.736 INFO  [main][JDBCBean] connecting to database
-09:54:04.783 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-09:54:06.188 INFO  [main][QuizeApplication] Started QuizeApplication in 3.165 seconds (JVM running for 5.034)
-09:54:12.385 ERROR [http-nio-8081-exec-1][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379] with root cause
-java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:779)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-09:56:29.082 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 5448 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
-09:56:29.082 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-09:56:30.644 INFO  [main][JDBCBean] connecting to database
-09:56:30.676 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-09:56:31.833 INFO  [main][QuizeApplication] Started QuizeApplication in 3.253 seconds (JVM running for 4.565)
-09:56:44.979 INFO  [http-nio-8081-exec-1][teacherAPI] showing the list of student marks
-10:25:35.228 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 10988 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
-10:25:35.228 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-10:25:37.025 INFO  [main][JDBCBean] connecting to database
-10:25:37.056 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-10:25:38.872 INFO  [main][QuizeApplication] Started QuizeApplication in 4.177 seconds (JVM running for 5.769)
-10:26:44.727 INFO  [http-nio-8081-exec-4][apiCalls] showing the list of questions
-10:28:42.700 INFO  [http-nio-8081-exec-4][apiCalls] checking the answers for adding marks
-10:28:47.810 INFO  [http-nio-8081-exec-5][teacherAPI] showing the list of student marks
-10:30:11.953 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 12636 (F:\Intelij Project\quize V2\quize\target\classes started by s.kashan in F:\Intelij Project\quize V2\quize)
-10:30:11.953 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-10:30:13.203 INFO  [main][JDBCBean] connecting to database
-10:30:13.250 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-10:30:14.618 INFO  [main][QuizeApplication] Started QuizeApplication in 3.332 seconds (JVM running for 4.773)
-18:49:34.864 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 1.8.0_45 on DESKTOP-TIH7J9U with PID 12156 (E:\project\quiz\quizWithSpringboot\target\classes started by Asus in E:\project\quiz\quizWithSpringboot)
-18:49:34.892 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-18:49:45.633 INFO  [main][JDBCBean] connecting to database
-18:49:45.840 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+10:49:43.538 INFO  [http-nio-8081-exec-4][teacherApi] showing the list of student marks
+10:53:34.037 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m9s749ms116µs).
+10:53:34.044 INFO  [http-nio-8081-exec-6][teacherApi] showing the list of student marks

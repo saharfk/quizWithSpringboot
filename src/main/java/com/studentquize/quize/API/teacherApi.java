@@ -35,7 +35,7 @@ public class teacherApi {
         studentDb.createStudentTable();
         markAndQuestionDB.createReportTable();
         String log = "creating Question, student and report Tables";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -48,7 +48,7 @@ public class teacherApi {
         logger.info("inserting question in Table (DEMO QUESTIONS)");
         markAndQuestionDB.addQuestionTable();
         String log = "inserting question in Table (DEMO QUESTIONS)";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -61,7 +61,7 @@ public class teacherApi {
         logger.info("inserting question in Table by teacher");
         markAndQuestionDB.addQuestionTeacher(question);
         String log = "inserting question in Table by teacher";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -74,7 +74,7 @@ public class teacherApi {
         logger.info("deleting the questions Table");
         markAndQuestionDB.deleteQuestionTable();
         String log = "deleting the questions Table";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -87,7 +87,7 @@ public class teacherApi {
         logger.info("deleting the report Table");
         markAndQuestionDB.deleteReportTable();
         String log = "deleting the report Table";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -99,7 +99,7 @@ public class teacherApi {
     public List<List<String>> showReport() {
         logger.info("showing the list of student marks");
         String log = "showing the list of student marks";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return markAndQuestionDB.readReportTable();
@@ -111,7 +111,7 @@ public class teacherApi {
         logger.info("updating question {} where {}", upQ.get("update"), upQ.get("condition"));
         markAndQuestionDB.updateQ(upQ);
         String log = "updating question " + upQ.get("update") + " where " + upQ.get("condition");
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -123,7 +123,7 @@ public class teacherApi {
         logger.info("updating question {} where {}", upMark.get("update"), upMark.get("condition"));
         markAndQuestionDB.updateMark(upMark);
         String log = "updating question " + upMark.get("update") + " where " + upMark.get("condition");
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -135,7 +135,7 @@ public class teacherApi {
         logger.info("deleting mark where {}", delMark);
         markAndQuestionDB.delMark(delMark);
         String log = "deleting mark where " + delMark;
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";

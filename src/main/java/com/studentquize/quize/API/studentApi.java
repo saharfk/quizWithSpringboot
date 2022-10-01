@@ -27,7 +27,7 @@ public class studentApi {
         logger.info("creating new student Table");
         studentDb.createStudentTable();
         String log = "creating new student Table";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -41,7 +41,7 @@ public class studentApi {
         logger.info("adding student to Table");
         studentDb.addStudentTable(Integer.parseInt(studentInfo.get(0)), studentInfo.get(1), studentInfo.get(2));
         String log = "adding student to Table";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -53,7 +53,7 @@ public class studentApi {
         logger.info("deleting student Table");
         studentDb.deleteStudentTable();
         String log = "deleting student Table";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -65,7 +65,7 @@ public class studentApi {
         logger.info("deleting studentId {}", num);
         studentDb.deleteStudent(num);
         String log = "deleting studentId " + num;
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -78,7 +78,7 @@ public class studentApi {
         logger.info("updating student where {}", upSt.get("update"));
         studentDb.updateStudent(upSt);
         String log = "updating student where " + upSt.get("update");
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
@@ -89,7 +89,7 @@ public class studentApi {
     public List<List<String>> studentList() {
         logger.info("showing the list of students");
         String log = "showing the list of students";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return studentDb.readStudentTable();

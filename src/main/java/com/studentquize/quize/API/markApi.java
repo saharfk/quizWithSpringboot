@@ -28,7 +28,7 @@ public class markApi {
         logger.info("showing the list of questions");
         JSONObject jsonObject = markAndQuestionDB.readQuestionTable();
         String log = "showing the list of questions";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return jsonObject;
@@ -49,7 +49,7 @@ public class markApi {
             }
             markAndQuestionDB.addReportTable(Integer.parseInt(answerInfo.get(0)), point);
             String log = "StdNum: " + answerInfo.get(0) + "'s grade is " + point;
-            String url = "http://localhost:9192/rabbit/report";
+            String url = "http://172.18.63.37:9192/rabbit/report";
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.postForObject(url, log, JSONObject.class);
             return "your grade is " + point;

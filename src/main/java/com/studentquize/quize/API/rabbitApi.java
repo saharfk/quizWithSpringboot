@@ -36,7 +36,7 @@ public class rabbitApi {
         logger.info("deleting log Table");
         logDb.deleteLogTable();
         String log = "deleting log Table";
-        String url = "http://localhost:9192/rabbit/report";
+        String url = "http://172.18.63.37:9192/rabbit/report";
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.postForObject(url, log, JSONObject.class);
         return "success";
