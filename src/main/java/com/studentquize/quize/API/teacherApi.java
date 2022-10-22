@@ -1,11 +1,15 @@
 package com.studentquize.quize.API;
 
+import com.studentquize.quize.DB.AppConfig;
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import com.studentquize.quize.DB.studentDB;
 import com.studentquize.quize.DB.MarkAndQuestionDB;
@@ -17,14 +21,18 @@ import java.util.List;
 @RestController
 @RequestMapping("/teacher")
 public class teacherApi {
-    static final Logger logger = LoggerFactory.getLogger(teacherApi.class);
-
+    @Autowired
+    private RestTemplate restTemplate;
+    @Autowired
+    public AppConfig appConfig;
     @Autowired
     MarkAndQuestionDB markAndQuestionDB;
     @Autowired
     studentDB studentDb;
     @Autowired
     logDB logDb;
+
+    static final Logger logger = LoggerFactory.getLogger(teacherApi.class);
 
     @GetMapping(value = "/newTable")
     public String newTable() {
@@ -35,9 +43,10 @@ public class teacherApi {
         studentDb.createStudentTable();
         markAndQuestionDB.createReportTable();
         String log = "creating Question, student and report Tables";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return "success";
 
     }
@@ -48,9 +57,11 @@ public class teacherApi {
         logger.info("inserting question in Table (DEMO QUESTIONS)");
         markAndQuestionDB.addQuestionTable();
         String log = "inserting question in Table (DEMO QUESTIONS)";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return "success";
 
     }
@@ -61,9 +72,11 @@ public class teacherApi {
         logger.info("inserting question in Table by teacher");
         markAndQuestionDB.addQuestionTeacher(question);
         String log = "inserting question in Table by teacher";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return "success";
 
     }
@@ -74,9 +87,11 @@ public class teacherApi {
         logger.info("deleting the questions Table");
         markAndQuestionDB.deleteQuestionTable();
         String log = "deleting the questions Table";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return "success";
 
     }
@@ -87,21 +102,24 @@ public class teacherApi {
         logger.info("deleting the report Table");
         markAndQuestionDB.deleteReportTable();
         String log = "deleting the report Table";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return "success";
 
     }
 
-    @Cacheable("marks")
+    //    @Cacheable("marks")
     @GetMapping(value = "/showReport")
     public List<List<String>> showReport() {
         logger.info("showing the list of student marks");
         String log = "showing the list of student marks";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return markAndQuestionDB.readReportTable();
     }
 
@@ -111,9 +129,11 @@ public class teacherApi {
         logger.info("updating question {} where {}", upQ.get("update"), upQ.get("condition"));
         markAndQuestionDB.updateQ(upQ);
         String log = "updating question " + upQ.get("update") + " where " + upQ.get("condition");
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return "success";
     }
 
@@ -123,9 +143,11 @@ public class teacherApi {
         logger.info("updating question {} where {}", upMark.get("update"), upMark.get("condition"));
         markAndQuestionDB.updateMark(upMark);
         String log = "updating question " + upMark.get("update") + " where " + upMark.get("condition");
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return "success";
     }
 
@@ -135,9 +157,10 @@ public class teacherApi {
         logger.info("deleting mark where {}", delMark);
         markAndQuestionDB.delMark(delMark);
         String log = "deleting mark where " + delMark;
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return "success";
 
     }

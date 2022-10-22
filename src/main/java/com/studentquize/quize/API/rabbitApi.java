@@ -1,5 +1,6 @@
 package com.studentquize.quize.API;
 
+import com.studentquize.quize.DB.AppConfig;
 import com.studentquize.quize.DB.logDB;
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
@@ -7,6 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,9 +20,14 @@ public class rabbitApi {
     static final Logger logger = LoggerFactory.getLogger(markApi.class);
     @Autowired
     logDB logDb;
+    @Autowired
+    RestTemplate restTemplate;
+    @Autowired
+    public AppConfig appConfig;
 
-    @PatchMapping(value = "/logging")
+    @PostMapping(value = "/logging")
     public String logging(@RequestBody String rabbitLog) {
+        System.out.println("wtf");
         logger.info("log to table");
         logDb.addLogTable(rabbitLog);
         return "success";
@@ -36,9 +45,10 @@ public class rabbitApi {
         logger.info("deleting log Table");
         logDb.deleteLogTable();
         String log = "deleting log Table";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
         return "success";
     }
 }

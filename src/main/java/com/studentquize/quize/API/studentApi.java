@@ -1,5 +1,6 @@
 package com.studentquize.quize.API;
 
+import com.studentquize.quize.DB.AppConfig;
 import com.studentquize.quize.DB.studentDB;
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
@@ -7,6 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,6 +23,10 @@ public class studentApi {
 
     @Autowired
     studentDB studentDb;
+    @Autowired
+    RestTemplate restTemplate;
+    @Autowired
+    public AppConfig appConfig;
 
     //    TODO THE API
     @CacheEvict(value = "students", allEntries = true)
@@ -27,9 +35,11 @@ public class studentApi {
         logger.info("creating new student Table");
         studentDb.createStudentTable();
         String log = "creating new student Table";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
+
         return "success";
 
     }
@@ -41,9 +51,11 @@ public class studentApi {
         logger.info("adding student to Table");
         studentDb.addStudentTable(Integer.parseInt(studentInfo.get(0)), studentInfo.get(1), studentInfo.get(2));
         String log = "adding student to Table";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
+
         return "success";
     }
 
@@ -53,9 +65,11 @@ public class studentApi {
         logger.info("deleting student Table");
         studentDb.deleteStudentTable();
         String log = "deleting student Table";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
+
         return "success";
     }
 
@@ -65,9 +79,11 @@ public class studentApi {
         logger.info("deleting studentId {}", num);
         studentDb.deleteStudent(num);
         String log = "deleting studentId " + num;
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
+
         return "success";
 
     }
@@ -78,9 +94,11 @@ public class studentApi {
         logger.info("updating student where {}", upSt.get("update"));
         studentDb.updateStudent(upSt);
         String log = "updating student where " + upSt.get("update");
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
+
         return "success";
     }
 
@@ -89,9 +107,11 @@ public class studentApi {
     public List<List<String>> studentList() {
         logger.info("showing the list of students");
         String log = "showing the list of students";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
+
         return studentDb.readStudentTable();
 
     }

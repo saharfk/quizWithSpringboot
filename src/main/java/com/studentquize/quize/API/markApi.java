@@ -1,5 +1,6 @@
 package com.studentquize.quize.API;
 
+import com.studentquize.quize.DB.AppConfig;
 import com.studentquize.quize.DB.MarkAndQuestionDB;
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
@@ -7,6 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -21,6 +25,10 @@ public class markApi {
 
     @Autowired
     MarkAndQuestionDB markAndQuestionDB;
+    @Autowired
+    RestTemplate restTemplate;
+    @Autowired
+    public AppConfig appConfig;
 
     @Cacheable("questions")
     @GetMapping(value = "/questions")
@@ -28,9 +36,11 @@ public class markApi {
         logger.info("showing the list of questions");
         JSONObject jsonObject = markAndQuestionDB.readQuestionTable();
         String log = "showing the list of questions";
-        String url = "http://172.18.63.37:9192/rabbit/report";
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(url, log, JSONObject.class);
+        String url = appConfig.getRabbitUrl();
+        HttpEntity<String> request = new HttpEntity<>(log);
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+        System.out.println("response is : " + response);
+
         return jsonObject;
     }
 
@@ -49,9 +59,11 @@ public class markApi {
             }
             markAndQuestionDB.addReportTable(Integer.parseInt(answerInfo.get(0)), point);
             String log = "StdNum: " + answerInfo.get(0) + "'s grade is " + point;
-            String url = "http://172.18.63.37:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
+
             return "your grade is " + point;
         }
         return "you answered the wrong questions :)";

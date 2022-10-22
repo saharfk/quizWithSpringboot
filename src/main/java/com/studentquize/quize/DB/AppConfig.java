@@ -18,6 +18,8 @@ public class AppConfig {
     private String port;
     @Value("${app.db.servicename}")
     private String servicename;
+    @Value("${rabbit.url}")
+    private String rabbitUrl;
 
     @Override
     public String toString() {
@@ -27,8 +29,18 @@ public class AppConfig {
                 ", password='" + password + '\'' +
                 ", port='" + port + '\'' +
                 ", servicename='" + servicename + '\'' +
+                ", rabbitUrl='" + rabbitUrl + '\'' +
                 '}';
     }
+
+    public String getRabbitUrl() {
+        return rabbitUrl;
+    }
+
+    public void setRabbitUrl(String rabbitUrl) {
+        this.rabbitUrl = rabbitUrl;
+    }
+
 
     public String getPort() {
         return port;

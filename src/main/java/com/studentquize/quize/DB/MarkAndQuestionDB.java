@@ -5,6 +5,9 @@ import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -20,6 +23,10 @@ public class MarkAndQuestionDB {
     public static final Logger logger = LoggerFactory.getLogger(MarkAndQuestionDB.class);
     @Autowired
     HikariDataSource dataSource;
+    @Autowired
+    RestTemplate restTemplate;
+    @Autowired
+    AppConfig appConfig;
 
     //*******************************CREATE*****************************************
     public void createQuestionTable() {
@@ -38,9 +45,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not creat the QUESTION table");
             String log = "ERROR: could not creat the QUESTION table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
         }
 
     }
@@ -59,9 +67,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not creat the REPORT table");
             String log = "ERROR: could not creat the REPORT table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
         }
 
     }
@@ -97,9 +106,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not insert values in QUESTION table");
             String log = "ERROR: could not insert values in QUESTION table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
         }
 
     }
@@ -115,9 +125,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not insert values in QUESTION table");
             String log = "ERROR: could not insert values in QUESTION table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
         }
 
 
@@ -135,9 +146,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not insert values in STUDENTREPORT table");
             String log = "ERROR: could not insert values in STUDENTREPORT table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
         }
 
 
@@ -155,9 +167,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not drop QUESTION table");
             String log = "ERROR: could not drop QUESTION table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
         }
 
 
@@ -173,9 +186,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not drop STUDENTREPORT table");
             String log = "ERROR: could not drop STUDENTREPORT table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
         }
 
     }
@@ -189,9 +203,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not delete table where {}", upMark);
             String log = "ERROR: could not delete table where " + upMark;
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
 
         }
 
@@ -213,9 +228,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not read the question table");
             String log = "ERROR: could not read the question table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
             return jsonObject;
         }
 
@@ -236,9 +252,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not read the answers from question table");
             String log = "ERROR: could not read the answers from question table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
             return jsonObject;
         }
 
@@ -266,9 +283,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not read the report table");
             String log = "ERROR: could not read the report table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
             return data;
         }
 
@@ -284,9 +302,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not update the question table");
             String log = "ERROR: could not update the question table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
 
         }
 
@@ -302,9 +321,10 @@ public class MarkAndQuestionDB {
         } catch (SQLException e) {
             logger.error("could not update report table");
             String log = "ERROR: could not update report table";
-            String url = "http://localhost:9192/rabbit/report";
-            RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForObject(url, log, JSONObject.class);
+            String url = appConfig.getRabbitUrl();
+            HttpEntity<String> request = new HttpEntity<>(log);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
+            System.out.println("response is : " + response);
 
         }
 
