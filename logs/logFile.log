@@ -1,43 +1,224 @@
-09:31:32.883 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 11908 (F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot)
-09:31:32.888 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-09:31:37.921 INFO  [main][JDBCBean] connecting to database
-09:31:38.276 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-09:31:42.911 INFO  [main][QuizeApplication] Started QuizeApplication in 11.274 seconds (JVM running for 15.023)
-09:31:47.517 INFO  [http-nio-8081-exec-2][teacherApi] showing the list of student marks
-09:32:12.851 INFO  [http-nio-8081-exec-3][teacherApi] showing the list of student marks
-09:32:37.564 INFO  [http-nio-8081-exec-4][teacherApi] showing the list of student marks
-09:33:46.832 INFO  [http-nio-8081-exec-7][teacherApi] showing the list of student marks
-09:35:40.173 INFO  [http-nio-8081-exec-10][teacherApi] showing the list of student marks
-09:36:44.988 INFO  [http-nio-8081-exec-3][teacherApi] showing the list of student marks
-09:37:02.319 INFO  [http-nio-8081-exec-4][teacherApi] showing the list of student marks
-09:41:13.787 INFO  [http-nio-8081-exec-7][teacherApi] showing the list of student marks
-09:46:44.815 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 12400 (F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot)
-09:46:44.831 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-09:46:46.206 INFO  [main][JDBCBean] connecting to database
-09:46:46.237 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-09:46:47.538 INFO  [main][QuizeApplication] Started QuizeApplication in 3.323 seconds (JVM running for 4.738)
-09:47:29.571 INFO  [http-nio-8081-exec-2][teacherApi] showing the list of student marks
-09:48:21.480 INFO  [http-nio-8081-exec-3][teacherApi] showing the list of student marks
-09:48:26.166 INFO  [http-nio-8081-exec-4][teacherApi] showing the list of student marks
-09:50:35.505 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 9832 (F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot)
-09:50:35.505 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-09:50:36.786 INFO  [main][JDBCBean] connecting to database
-09:50:36.817 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-09:50:38.055 INFO  [main][QuizeApplication] Started QuizeApplication in 3.1 seconds (JVM running for 4.475)
-09:50:47.597 INFO  [http-nio-8081-exec-2][teacherApi] showing the list of student marks
-09:54:41.319 INFO  [http-nio-8081-exec-5][teacherApi] showing the list of student marks
-09:55:53.775 INFO  [http-nio-8081-exec-9][teacherApi] showing the list of student marks
-09:57:32.534 INFO  [http-nio-8081-exec-8][teacherApi] showing the list of student marks
-09:57:42.434 INFO  [http-nio-8081-exec-2][teacherApi] showing the list of student marks
-09:57:59.531 INFO  [http-nio-8081-exec-3][teacherApi] showing the list of student marks
-09:59:48.831 INFO  [http-nio-8081-exec-6][teacherApi] showing the list of student marks
-10:00:48.286 INFO  [http-nio-8081-exec-7][teacherApi] showing the list of student marks
-10:01:32.057 INFO  [http-nio-8081-exec-9][teacherApi] showing the list of student marks
-10:01:35.171 INFO  [http-nio-8081-exec-10][teacherApi] showing the list of student marks
-10:03:19.366 INFO  [http-nio-8081-exec-2][teacherApi] showing the list of student marks
-10:03:43.846 INFO  [http-nio-8081-exec-4][teacherApi] showing the list of student marks
-10:03:50.107 ERROR [http-nio-8081-exec-2][MarkAndQuestionDB] could not read the report table
-10:03:52.270 ERROR [http-nio-8081-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+14:41:05.551 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 12408 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+14:41:05.566 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+14:41:07.160 INFO  [main][JDBCBean] connecting to database
+14:41:07.191 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+14:41:08.491 INFO  [main][QuizeApplication] Started QuizeApplication in 3.782 seconds (JVM running for 5.65)
+14:41:32.955 INFO  [http-nio-8085-exec-2][teacherApi] showing the list of student marks
+14:41:32.998 ERROR [http-nio-8085-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://192.168.25.37:49154/rabbit/report": Invalid Http response; nested exception is java.io.IOException: Invalid Http response] with root cause
+java.io.IOException: Invalid Http response
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1634)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:55)
+	at org.springframework.web.client.DefaultResponseErrorHandler.hasError(DefaultResponseErrorHandler.java:61)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:807)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:122)
+	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
+	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$c10df549.showReport(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+14:43:20.270 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 4544 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+14:43:20.270 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+14:43:22.314 INFO  [main][JDBCBean] connecting to database
+14:43:22.345 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+14:43:23.678 INFO  [main][QuizeApplication] Started QuizeApplication in 4.252 seconds (JVM running for 6.138)
+14:45:14.586 INFO  [http-nio-8085-exec-2][teacherApi] showing the list of student marks
+14:51:56.176 INFO  [http-nio-8085-exec-4][markApi] log to table
+14:51:56.191 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+14:51:56.320 INFO  [http-nio-8085-exec-5][markApi] log to table
+14:51:56.320 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+14:51:56.351 INFO  [http-nio-8085-exec-6][markApi] log to table
+14:51:56.351 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+14:51:56.382 INFO  [http-nio-8085-exec-7][markApi] log to table
+14:51:56.382 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+14:51:56.413 INFO  [http-nio-8085-exec-8][markApi] log to table
+14:51:56.413 ERROR [http-nio-8085-exec-8][MarkAndQuestionDB] could not creat the log table
+14:51:56.445 INFO  [http-nio-8085-exec-9][markApi] log to table
+14:51:56.445 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table
+14:51:56.476 INFO  [http-nio-8085-exec-10][markApi] log to table
+14:51:56.476 ERROR [http-nio-8085-exec-10][MarkAndQuestionDB] could not creat the log table
+14:51:56.507 INFO  [http-nio-8085-exec-1][markApi] log to table
+14:51:56.507 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+14:51:56.539 INFO  [http-nio-8085-exec-2][markApi] log to table
+14:51:56.540 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+14:51:56.572 INFO  [http-nio-8085-exec-3][markApi] log to table
+14:52:26.589 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the log table
+14:52:26.637 INFO  [http-nio-8085-exec-4][markApi] log to table
+14:52:56.650 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+14:52:56.697 INFO  [http-nio-8085-exec-5][markApi] log to table
+14:53:26.702 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+14:53:26.749 INFO  [http-nio-8085-exec-6][markApi] log to table
+14:53:56.758 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+14:53:56.790 INFO  [http-nio-8085-exec-7][markApi] log to table
+14:54:26.795 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+14:54:26.842 INFO  [http-nio-8085-exec-8][markApi] log to table
+14:54:56.879 ERROR [http-nio-8085-exec-8][MarkAndQuestionDB] could not creat the log table
+14:54:56.928 INFO  [http-nio-8085-exec-9][markApi] log to table
+14:55:10.299 INFO  [http-nio-8085-exec-10][markApi] create log table
+14:55:26.945 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table
+14:55:26.993 INFO  [http-nio-8085-exec-1][markApi] log to table
+14:55:40.312 ERROR [http-nio-8085-exec-10][MarkAndQuestionDB] could not creat the QUESTION table
+14:55:57.001 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+14:55:57.048 INFO  [http-nio-8085-exec-2][markApi] log to table
+14:56:27.054 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+14:56:27.101 INFO  [http-nio-8085-exec-3][markApi] log to table
+14:56:33.149 INFO  [http-nio-8085-exec-4][markApi] create log table
+14:56:57.118 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the log table
+14:56:57.165 INFO  [http-nio-8085-exec-5][markApi] log to table
+14:57:03.159 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the QUESTION table
+14:57:27.169 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+14:57:27.216 INFO  [http-nio-8085-exec-6][markApi] log to table
+14:57:57.225 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+14:57:57.272 INFO  [http-nio-8085-exec-7][markApi] log to table
+14:58:27.278 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+14:58:27.325 INFO  [http-nio-8085-exec-9][markApi] log to table
+14:58:57.334 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table
+14:58:57.384 INFO  [http-nio-8085-exec-10][markApi] log to table
+14:59:27.403 ERROR [http-nio-8085-exec-10][MarkAndQuestionDB] could not creat the log table
+14:59:27.438 INFO  [http-nio-8085-exec-1][markApi] log to table
+14:59:57.452 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+14:59:57.484 INFO  [http-nio-8085-exec-2][markApi] log to table
+15:00:13.415 INFO  [http-nio-8085-exec-3][markApi] create log table
+15:00:27.492 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:00:27.541 INFO  [http-nio-8085-exec-4][markApi] log to table
+15:00:43.428 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the QUESTION table
+15:00:57.545 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+15:00:57.576 INFO  [http-nio-8085-exec-5][markApi] log to table
+15:01:00.928 INFO  [http-nio-8085-exec-8][teacherApi] showing the list of student marks
+15:01:27.591 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+15:01:27.622 INFO  [http-nio-8085-exec-7][markApi] log to table
+15:01:37.169 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 9104 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+15:01:37.169 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+15:01:38.419 INFO  [main][JDBCBean] connecting to database
+15:01:38.450 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+15:01:40.000 INFO  [main][QuizeApplication] Started QuizeApplication in 3.324 seconds (JVM running for 4.95)
+15:01:40.398 INFO  [http-nio-8085-exec-1][markApi] log to table
+15:01:40.460 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+15:01:40.511 INFO  [http-nio-8085-exec-2][markApi] log to table
+15:01:40.511 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:01:40.542 INFO  [http-nio-8085-exec-3][markApi] log to table
+15:01:40.542 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the log table
+15:01:40.573 INFO  [http-nio-8085-exec-4][markApi] log to table
+15:01:40.573 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+15:01:40.605 INFO  [http-nio-8085-exec-5][markApi] log to table
+15:01:40.605 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+15:01:40.641 INFO  [http-nio-8085-exec-6][markApi] log to table
+15:01:40.658 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+15:01:40.689 INFO  [http-nio-8085-exec-7][markApi] log to table
+15:01:40.697 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+15:01:40.734 INFO  [http-nio-8085-exec-8][markApi] log to table
+15:01:40.740 ERROR [http-nio-8085-exec-8][MarkAndQuestionDB] could not creat the log table
+15:01:40.763 INFO  [http-nio-8085-exec-9][markApi] log to table
+15:01:40.765 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table
+15:01:40.810 INFO  [http-nio-8085-exec-10][markApi] log to table
+15:01:40.812 ERROR [http-nio-8085-exec-10][MarkAndQuestionDB] could not creat the log table
+15:01:40.841 INFO  [http-nio-8085-exec-1][markApi] log to table
+15:02:10.845 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+15:02:10.878 INFO  [http-nio-8085-exec-2][markApi] log to table
+15:02:30.896 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 8816 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+15:02:30.896 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+15:02:32.392 INFO  [main][JDBCBean] connecting to database
+15:02:32.423 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+15:02:33.829 INFO  [main][QuizeApplication] Started QuizeApplication in 3.435 seconds (JVM running for 5.589)
+15:02:42.337 INFO  [http-nio-8085-exec-1][markApi] log to table
+15:02:49.490 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+15:03:22.542 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s724ms206µs700ns).
+15:03:24.589 INFO  [http-nio-8085-exec-2][markApi] log to table
+15:04:35.085 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s532ms702µs300ns).
+15:04:35.085 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:04:35.132 INFO  [http-nio-8085-exec-3][markApi] log to table
+15:04:35.132 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the log table
+15:04:35.163 INFO  [http-nio-8085-exec-4][markApi] log to table
+15:04:35.163 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+15:04:42.246 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 15992 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+15:04:42.246 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+15:04:43.761 INFO  [main][JDBCBean] connecting to database
+15:04:43.793 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+15:04:45.203 INFO  [main][QuizeApplication] Started QuizeApplication in 3.417 seconds (JVM running for 5.541)
+15:04:48.972 INFO  [http-nio-8085-exec-2][markApi] log to table
+15:05:41.032 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s841ms955µs200ns).
+15:05:41.728 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:16:13.036 INFO  [http-nio-8085-exec-1][markApi] log to table
+15:16:13.037 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m32s2ms361µs600ns).
+15:16:13.054 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+15:16:13.066 INFO  [http-nio-8085-exec-6][teacherApi] showing the list of student marks
+15:16:25.860 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 15868 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+15:16:25.875 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+15:16:27.422 INFO  [main][JDBCBean] connecting to database
+15:16:27.469 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+15:16:29.002 INFO  [main][QuizeApplication] Started QuizeApplication in 3.632 seconds (JVM running for 5.432)
+15:16:56.220 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 16136 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+15:16:56.220 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+15:16:58.139 INFO  [main][JDBCBean] connecting to database
+15:16:58.202 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+15:17:00.849 INFO  [main][QuizeApplication] Started QuizeApplication in 5.075 seconds (JVM running for 7.391)
+15:18:07.543 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s284ms933µs800ns).
+15:18:07.546 INFO  [http-nio-8085-exec-2][teacherApi] showing the list of student marks
+15:25:19.549 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m41s946ms625µs400ns).
+15:28:16.185 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 12444 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+15:28:16.185 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+15:28:17.861 INFO  [main][JDBCBean] connecting to database
+15:28:17.908 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+15:28:19.338 INFO  [main][QuizeApplication] Started QuizeApplication in 3.673 seconds (JVM running for 5.836)
+15:28:47.202 INFO  [http-nio-8085-exec-2][markApi] log to table
+15:30:19.901 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m1s587ms96µs200ns).
+15:30:24.182 INFO  [http-nio-8085-exec-4][teacherApi] showing the list of student marks
+15:30:30.127 ERROR [http-nio-8085-exec-4][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
 java.net.ConnectException: Connection refused: connect
 	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
 	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
@@ -61,15 +242,14 @@ java.net.ConnectException: Connection refused: connect
 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437)
-	at com.studentquize.quize.DB.MarkAndQuestionDB.readReportTable(MarkAndQuestionDB.java:271)
-	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:112)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:122)
 	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
 	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$2f1d33f6.showReport(<generated>)
+	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$cac4d50a.showReport(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -120,8 +300,8 @@ java.net.ConnectException: Connection refused: connect
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-10:04:13.866 ERROR [http-nio-8081-exec-4][MarkAndQuestionDB] could not read the report table
-10:04:15.921 ERROR [http-nio-8081-exec-4][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+15:30:42.991 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:30:45.038 ERROR [http-nio-8085-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
 java.net.ConnectException: Connection refused: connect
 	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
 	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
@@ -145,100 +325,9 @@ java.net.ConnectException: Connection refused: connect
 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437)
-	at com.studentquize.quize.DB.MarkAndQuestionDB.readReportTable(MarkAndQuestionDB.java:271)
-	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:112)
-	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$2f1d33f6.showReport(<generated>)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-10:04:33.621 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 10800 (F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot)
-10:04:33.621 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-10:04:34.808 INFO  [main][JDBCBean] connecting to database
-10:04:34.839 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-10:04:36.030 INFO  [main][QuizeApplication] Started QuizeApplication in 2.856 seconds (JVM running for 4.375)
-10:04:41.359 INFO  [http-nio-8081-exec-1][teacherApi] showing the list of student marks
-10:05:49.775 INFO  [http-nio-8081-exec-5][teacherApi] showing the list of student marks
-10:07:10.901 INFO  [http-nio-8081-exec-8][teacherApi] showing the list of student marks
-10:07:35.648 INFO  [http-nio-8081-exec-9][teacherApi] showing the list of student marks
-10:10:15.404 INFO  [http-nio-8081-exec-2][teacherApi] showing the list of student marks
-10:10:28.633 INFO  [http-nio-8081-exec-3][teacherApi] showing the list of student marks
-10:48:03.946 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 2164 (F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot)
-10:48:03.962 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-10:48:05.212 INFO  [main][JDBCBean] connecting to database
-10:48:05.243 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-10:48:06.481 INFO  [main][QuizeApplication] Started QuizeApplication in 3.024 seconds (JVM running for 4.449)
-10:48:12.886 INFO  [http-nio-8081-exec-3][teacherApi] showing the list of student marks
-10:48:12.904 ERROR [http-nio-8081-exec-3][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Not enough variable values available to expand 'rabbit.url'] with root cause
-java.lang.IllegalArgumentException: Not enough variable values available to expand 'rabbit.url'
-	at org.springframework.web.util.UriComponents$VarArgsTemplateVariables.getValue(UriComponents.java:370)
-	at org.springframework.web.util.UriComponents.expandUriComponent(UriComponents.java:263)
-	at org.springframework.web.util.HierarchicalUriComponents.expandInternal(HierarchicalUriComponents.java:442)
-	at org.springframework.web.util.HierarchicalUriComponents.expandInternal(HierarchicalUriComponents.java:53)
-	at org.springframework.web.util.UriComponents.expand(UriComponents.java:172)
-	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.build(DefaultUriBuilderFactory.java:403)
-	at org.springframework.web.util.DefaultUriBuilderFactory.expand(DefaultUriBuilderFactory.java:154)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
 	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:119)
-	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$60591a8d.showReport(<generated>)
+	at com.studentquize.quize.DB.logDB.addLogTable(logDB.java:64)
+	at com.studentquize.quize.API.rabbitApi.logging(rabbitApi.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -252,8 +341,8 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
@@ -289,31 +378,120 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-10:48:50.241 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 10052 (F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot)
-10:48:50.256 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-10:48:51.475 INFO  [main][JDBCBean] connecting to database
-10:48:51.506 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-10:48:52.841 INFO  [main][QuizeApplication] Started QuizeApplication in 3.072 seconds (JVM running for 4.484)
-10:48:55.767 INFO  [http-nio-8081-exec-2][teacherApi] showing the list of student marks
-10:48:55.786 ERROR [http-nio-8081-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Not enough variable values available to expand 'rabbit.url'] with root cause
-java.lang.IllegalArgumentException: Not enough variable values available to expand 'rabbit.url'
-	at org.springframework.web.util.UriComponents$VarArgsTemplateVariables.getValue(UriComponents.java:370)
-	at org.springframework.web.util.UriComponents.expandUriComponent(UriComponents.java:263)
-	at org.springframework.web.util.HierarchicalUriComponents$PathSegmentComponent.expand(HierarchicalUriComponents.java:995)
-	at org.springframework.web.util.HierarchicalUriComponents.expandInternal(HierarchicalUriComponents.java:440)
-	at org.springframework.web.util.HierarchicalUriComponents.expandInternal(HierarchicalUriComponents.java:53)
-	at org.springframework.web.util.UriComponents.expand(UriComponents.java:172)
-	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.build(DefaultUriBuilderFactory.java:403)
-	at org.springframework.web.util.DefaultUriBuilderFactory.expand(DefaultUriBuilderFactory.java:154)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+15:30:45.054 ERROR [http-nio-8085-exec-2][[localhost]] Exception Processing ErrorPage[errorCode=0, location=/error]
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:113)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:79)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:50)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:466)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:135)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1424)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:768)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:732)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:716)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:573)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:221)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1255)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:402)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
+	... 53 common frames omitted
+Wrapped by: org.apache.catalina.connector.ClientAbortException: java.io.IOException: An existing connection was forcibly closed by the remote host
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:310)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:273)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:153)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1187)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1009)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:711)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:385)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:313)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:403)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:249)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:344)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+15:31:28.139 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 7788 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+15:31:28.139 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+15:31:29.576 INFO  [main][JDBCBean] connecting to database
+15:31:29.623 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+15:31:31.077 INFO  [main][QuizeApplication] Started QuizeApplication in 3.401 seconds (JVM running for 5.194)
+15:31:47.868 INFO  [http-nio-8085-exec-2][teacherApi] showing the list of student marks
+15:31:56.777 ERROR [http-nio-8085-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at java.base/java.net.Socket.connect(Socket.java:557)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
 	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:119)
+	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:122)
 	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
 	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$8614dbfb.showReport(<generated>)
+	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$89f21be7.showReport(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -364,9 +542,40 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-11:00:27.081 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 6356 (F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\Intelij Project\quiz V3\quiz V5\quizWithSpringboot)
-11:00:27.081 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
-11:00:28.316 INFO  [main][JDBCBean] connecting to database
-11:00:28.347 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-11:00:29.534 INFO  [main][QuizeApplication] Started QuizeApplication in 2.987 seconds (JVM running for 4.414)
-11:00:33.262 INFO  [http-nio-8081-exec-1][teacherApi] showing the list of student marks
+15:33:03.315 INFO  [http-nio-8085-exec-4][teacherApi] showing the list of student marks
+15:34:37.584 INFO  [http-nio-8085-exec-5][markApi] log to table
+15:34:37.584 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s269ms778µs300ns).
+15:34:40.777 INFO  [http-nio-8085-exec-6][markApi] log to table
+15:34:44.420 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+15:34:52.366 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+15:35:48.979 WARN  [HikariPool-1 housekeeper][HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s395ms582µs100ns).
+15:35:56.607 INFO  [main][QuizeApplication] Starting QuizeApplication using Java 11.0.10 on P-Skashan with PID 6308 (F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot\target\classes started by s.kashan in F:\IntelijProject\quiz V3\quiz V5\quizWithSpringboot)
+15:35:56.607 INFO  [main][QuizeApplication] No active profile set, falling back to 1 default profile: "default"
+15:35:58.045 INFO  [main][JDBCBean] connecting to database
+15:35:58.091 WARN  [main][DriverDataSource] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+15:35:59.513 INFO  [main][QuizeApplication] Started QuizeApplication in 3.439 seconds (JVM running for 5.535)
+15:36:42.872 INFO  [http-nio-8085-exec-2][markApi] log to table
+15:37:01.170 INFO  [http-nio-8085-exec-1][markApi] log to table
+15:38:15.485 INFO  [http-nio-8085-exec-5][teacherApi] showing the list of student marks
+15:38:20.160 INFO  [http-nio-8085-exec-6][markApi] log to table
+15:39:19.102 INFO  [http-nio-8085-exec-7][teacherApi] showing the list of student marks
+15:39:19.158 INFO  [http-nio-8085-exec-8][markApi] log to table
+15:39:19.961 INFO  [http-nio-8085-exec-9][teacherApi] showing the list of student marks
+15:39:19.989 INFO  [http-nio-8085-exec-10][markApi] log to table
+15:39:21.001 INFO  [http-nio-8085-exec-2][teacherApi] showing the list of student marks
+15:39:21.024 INFO  [http-nio-8085-exec-1][markApi] log to table
+15:39:21.876 INFO  [http-nio-8085-exec-3][teacherApi] showing the list of student marks
+15:39:21.905 INFO  [http-nio-8085-exec-4][markApi] log to table
+15:39:51.906 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not read the report table
+15:39:51.906 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+15:39:51.955 INFO  [http-nio-8085-exec-6][markApi] log to table
+15:40:21.964 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+15:40:22.011 INFO  [http-nio-8085-exec-5][markApi] log to table
+15:40:52.021 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+15:40:52.071 INFO  [http-nio-8085-exec-7][markApi] log to table
+15:41:22.074 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+15:41:22.121 INFO  [http-nio-8085-exec-8][markApi] log to table
+15:41:52.126 ERROR [http-nio-8085-exec-8][MarkAndQuestionDB] could not creat the log table
+15:41:52.173 INFO  [http-nio-8085-exec-9][markApi] log to table
+15:42:22.189 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table
+15:42:22.236 INFO  [http-nio-8085-exec-10][markApi] log to table

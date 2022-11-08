@@ -1,5 +1,120 @@
-10:03:50.107 ERROR [http-nio-8081-exec-2][MarkAndQuestionDB] could not read the report table
-10:03:52.270 ERROR [http-nio-8081-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+14:41:32.998 ERROR [http-nio-8085-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://192.168.25.37:49154/rabbit/report": Invalid Http response; nested exception is java.io.IOException: Invalid Http response] with root cause
+java.io.IOException: Invalid Http response
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1634)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:55)
+	at org.springframework.web.client.DefaultResponseErrorHandler.hasError(DefaultResponseErrorHandler.java:61)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:807)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:122)
+	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
+	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$c10df549.showReport(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+14:51:56.191 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+14:51:56.320 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+14:51:56.351 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+14:51:56.382 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+14:51:56.413 ERROR [http-nio-8085-exec-8][MarkAndQuestionDB] could not creat the log table
+14:51:56.445 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table
+14:51:56.476 ERROR [http-nio-8085-exec-10][MarkAndQuestionDB] could not creat the log table
+14:51:56.507 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+14:51:56.540 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+14:52:26.589 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the log table
+14:52:56.650 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+14:53:26.702 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+14:53:56.758 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+14:54:26.795 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+14:54:56.879 ERROR [http-nio-8085-exec-8][MarkAndQuestionDB] could not creat the log table
+14:55:26.945 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table
+14:55:40.312 ERROR [http-nio-8085-exec-10][MarkAndQuestionDB] could not creat the QUESTION table
+14:55:57.001 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+14:56:27.054 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+14:56:57.118 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the log table
+14:57:03.159 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the QUESTION table
+14:57:27.169 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+14:57:57.225 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+14:58:27.278 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+14:58:57.334 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table
+14:59:27.403 ERROR [http-nio-8085-exec-10][MarkAndQuestionDB] could not creat the log table
+14:59:57.452 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+15:00:27.492 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:00:43.428 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the QUESTION table
+15:00:57.545 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+15:01:27.591 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+15:01:40.460 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+15:01:40.511 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:01:40.542 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the log table
+15:01:40.573 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+15:01:40.605 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+15:01:40.658 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+15:01:40.697 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+15:01:40.740 ERROR [http-nio-8085-exec-8][MarkAndQuestionDB] could not creat the log table
+15:01:40.765 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table
+15:01:40.812 ERROR [http-nio-8085-exec-10][MarkAndQuestionDB] could not creat the log table
+15:02:10.845 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+15:02:49.490 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+15:04:35.085 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:04:35.132 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not creat the log table
+15:04:35.163 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+15:05:41.728 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:16:13.054 ERROR [http-nio-8085-exec-1][MarkAndQuestionDB] could not creat the log table
+15:30:30.127 ERROR [http-nio-8085-exec-4][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
 java.net.ConnectException: Connection refused: connect
 	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
 	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
@@ -23,15 +138,14 @@ java.net.ConnectException: Connection refused: connect
 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437)
-	at com.studentquize.quize.DB.MarkAndQuestionDB.readReportTable(MarkAndQuestionDB.java:271)
-	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:112)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:122)
 	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
 	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$2f1d33f6.showReport(<generated>)
+	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$cac4d50a.showReport(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -82,8 +196,8 @@ java.net.ConnectException: Connection refused: connect
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-10:04:13.866 ERROR [http-nio-8081-exec-4][MarkAndQuestionDB] could not read the report table
-10:04:15.921 ERROR [http-nio-8081-exec-4][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+15:30:42.991 ERROR [http-nio-8085-exec-2][MarkAndQuestionDB] could not creat the log table
+15:30:45.038 ERROR [http-nio-8085-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
 java.net.ConnectException: Connection refused: connect
 	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
 	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
@@ -107,83 +221,9 @@ java.net.ConnectException: Connection refused: connect
 	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:437)
-	at com.studentquize.quize.DB.MarkAndQuestionDB.readReportTable(MarkAndQuestionDB.java:271)
-	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:112)
-	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$2f1d33f6.showReport(<generated>)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-10:48:12.904 ERROR [http-nio-8081-exec-3][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Not enough variable values available to expand 'rabbit.url'] with root cause
-java.lang.IllegalArgumentException: Not enough variable values available to expand 'rabbit.url'
-	at org.springframework.web.util.UriComponents$VarArgsTemplateVariables.getValue(UriComponents.java:370)
-	at org.springframework.web.util.UriComponents.expandUriComponent(UriComponents.java:263)
-	at org.springframework.web.util.HierarchicalUriComponents.expandInternal(HierarchicalUriComponents.java:442)
-	at org.springframework.web.util.HierarchicalUriComponents.expandInternal(HierarchicalUriComponents.java:53)
-	at org.springframework.web.util.UriComponents.expand(UriComponents.java:172)
-	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.build(DefaultUriBuilderFactory.java:403)
-	at org.springframework.web.util.DefaultUriBuilderFactory.expand(DefaultUriBuilderFactory.java:154)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
 	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:119)
-	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$60591a8d.showReport(<generated>)
+	at com.studentquize.quize.DB.logDB.addLogTable(logDB.java:64)
+	at com.studentquize.quize.API.rabbitApi.logging(rabbitApi.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -197,8 +237,8 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
@@ -234,25 +274,114 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-10:48:55.786 ERROR [http-nio-8081-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Not enough variable values available to expand 'rabbit.url'] with root cause
-java.lang.IllegalArgumentException: Not enough variable values available to expand 'rabbit.url'
-	at org.springframework.web.util.UriComponents$VarArgsTemplateVariables.getValue(UriComponents.java:370)
-	at org.springframework.web.util.UriComponents.expandUriComponent(UriComponents.java:263)
-	at org.springframework.web.util.HierarchicalUriComponents$PathSegmentComponent.expand(HierarchicalUriComponents.java:995)
-	at org.springframework.web.util.HierarchicalUriComponents.expandInternal(HierarchicalUriComponents.java:440)
-	at org.springframework.web.util.HierarchicalUriComponents.expandInternal(HierarchicalUriComponents.java:53)
-	at org.springframework.web.util.UriComponents.expand(UriComponents.java:172)
-	at org.springframework.web.util.DefaultUriBuilderFactory$DefaultUriBuilder.build(DefaultUriBuilderFactory.java:403)
-	at org.springframework.web.util.DefaultUriBuilderFactory.expand(DefaultUriBuilderFactory.java:154)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+15:30:45.054 ERROR [http-nio-8085-exec-2][[localhost]] Exception Processing ErrorPage[errorCode=0, location=/error]
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:113)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:79)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:50)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:466)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:135)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1424)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:768)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:732)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:716)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:573)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:221)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1255)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:402)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
+	... 53 common frames omitted
+Wrapped by: org.apache.catalina.connector.ClientAbortException: java.io.IOException: An existing connection was forcibly closed by the remote host
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:310)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:273)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:153)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1187)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1009)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:711)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:385)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:313)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:403)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:249)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:344)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+15:31:56.777 ERROR [http-nio-8085-exec-2][[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9192/rabbit/report": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect] with root cause
+java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at java.base/java.net.Socket.connect(Socket.java:557)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
 	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:119)
+	at com.studentquize.quize.API.teacherApi.showReport(teacherApi.java:122)
 	at com.studentquize.quize.API.teacherApi$$FastClassBySpringCGLIB$$df764c16.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
 	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$8614dbfb.showReport(<generated>)
+	at com.studentquize.quize.API.teacherApi$$EnhancerBySpringCGLIB$$89f21be7.showReport(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -303,3 +432,12 @@ java.lang.IllegalArgumentException: Not enough variable values available to expa
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+15:34:44.420 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+15:34:52.366 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+15:39:51.906 ERROR [http-nio-8085-exec-3][MarkAndQuestionDB] could not read the report table
+15:39:51.906 ERROR [http-nio-8085-exec-4][MarkAndQuestionDB] could not creat the log table
+15:40:21.964 ERROR [http-nio-8085-exec-6][MarkAndQuestionDB] could not creat the log table
+15:40:52.021 ERROR [http-nio-8085-exec-5][MarkAndQuestionDB] could not creat the log table
+15:41:22.074 ERROR [http-nio-8085-exec-7][MarkAndQuestionDB] could not creat the log table
+15:41:52.126 ERROR [http-nio-8085-exec-8][MarkAndQuestionDB] could not creat the log table
+15:42:22.189 ERROR [http-nio-8085-exec-9][MarkAndQuestionDB] could not creat the log table

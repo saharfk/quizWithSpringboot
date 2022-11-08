@@ -116,6 +116,7 @@ public class teacherApi {
     public List<List<String>> showReport() {
         logger.info("showing the list of student marks");
         String log = "showing the list of student marks";
+        System.out.println("showing report masaln?????");
         String url = appConfig.getRabbitUrl();
         HttpEntity<String> request = new HttpEntity<>(log);
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, request, String.class);
